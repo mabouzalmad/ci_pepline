@@ -1,4 +1,4 @@
-name: TP5
+name: TP4
 on:
   push:
     branches:
@@ -19,7 +19,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: installer les dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r tests/requirements.txt
+        
       - name: verifier flake8
         run: |
           flake8 app --count --select=E9,F63,F7,F82,F841 --show-source --statistics
@@ -27,4 +28,8 @@ jobs:
           flake8 tests --count --max-line-length=127 --statistics
       - name: lancer les tests
         run: python -m pytest -v --cov=app
+
+
+
+
 
