@@ -21,9 +21,3 @@ class UserManager:
         # tmp=0
         return len(users)
     # ajout de commentaire
-
-
-    
-  
-
-    
